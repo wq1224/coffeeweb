@@ -1,0 +1,453 @@
+ <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.content %></td>
+    </tr>
+  <% end %>
+		<!--- header-top ---->
+		<div id="home" class="header-top">
+			<!--- container ---->
+			<div class="container">
+				<div class="header-logo">
+					<%= image_tag "logo-big.png" %>
+				</div>
+				<div class="header-sub-text">
+					<h2>公益心理机构</h2>
+					<p>一杯咖啡公益心理团队：一群获得国家二级心理咨询师资质的老师发起的公益性质的心理专业团队。
+						<br/>我们的宗旨是运用心理咨询师的专长，让所有参加者能够仅仅花费“一杯咖啡”的价钱，解决困惑个人的问题，获得正能量，推动他们主动改变生活。</p>
+				</div>
+				<div class="header-top-grids">
+					<div class="col-md-4 about-nav4">
+						<a class="scroll" href="#counsel"><span class="nav-icon4"> </span><label>心理咨询</label></a>
+					</div>
+					<div class="col-md-4 about-nav5">
+						<a class="scroll" href="#meet"><span class="nav-icon5"> </span><label>咖啡相遇</label></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="header-bottom-grids">
+					<div class="col-md-6 left-grid text-left">
+						<div class="about-nav">
+							<a class="scroll" href="#groupCounsel"><span class="nav-icon"> </span><label>心灵聚会</label></a>
+						</div>
+						<div class="about-nav1">
+							<a class="scroll" href="#grow"><span class="nav-icon1"> </span><label>心理师成长</label></a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="col-md-6 right-grid text-right">
+						<div class="about-nav2">
+							<a class="scroll" href="#enter"><span class="nav-icon2"> </span><label>活动报名</label></a>
+						</div>
+						<div class="about-nav3">
+							<a class="scroll" href="#activity"><span class="nav-icon3"> </span><label>咖啡播报</label></a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="arrow-grid">
+					<div class="arrow">
+						<a class="scroll" href="#header-nav"><span> </span></a>
+					</div>
+				</div>
+			</div>
+			<!--- container ---->
+		</div>
+		<!--- header-top ---->
+		<!--- header-bottom ---->
+		<!-- Sticky Nav -->
+		<div id="header-nav" class="header-nav">
+			<div class="top-nav">
+				<nav>
+					<div class="logo">
+						<a href="#">
+							<%= image_tag "logo2.png" %>
+						</a>
+					</div>
+					<span class="menu"></span>
+					<ul>
+						<li class="active"><a class="scroll" href="#home">首页</a>
+						</li>
+						<li><a class="scroll" href="#counsel">心理咨询</a>
+						</li>
+						<li><a class="scroll" href="#meet">咖啡相遇</a>
+						</li>
+						<li><a class="scroll" href="#groupCounsel">心灵聚会</a>
+						</li>
+						<li><a class="scroll" href="#grow">心理师成长</a>
+						</li>
+						<li><a class="scroll" href="#enter">活动报名</a>
+						</li>
+						<li><a class="scroll" href="#activity">咖啡播报</a>
+						</li>
+						<li class="contact"><a class="scroll" href="#contact">联系我们</a>
+						</li>	
+						<div class="clearfix"> </div>	
+					</ul>
+				</nav>
+			</div>
+			<!--script-nav-->
+			<script>
+				$("span.menu").click(function(){
+				 $(".top-nav ul").slideToggle("slow" , function(){
+				 });
+				 });
+			</script>
+			<!--script-nav-->
+			<script src="js/myscript.js">
+			</script>
+		</div>
+		<!-- top-nav -->
+		<!-- Sticky Nav --->
+<!--- content ---->
+	<div id="enter" class="content">
+		<!--- container ---->
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-3 content-top-grid">					
+						<div class="image-grid">
+						<%= image_tag "n11.jpg" %>
+						</div>
+						<h3>相遇在上海</h3>
+						<p>一杯咖啡乐活社群"相遇在上海"<br/>
+							邀请在上海工作并生活的单身的你，加入其中，一起在上海美好地相遇！
+						</p>					
+				</div>
+				<div class="col-md-3 content-top-grid">					
+						<div class="image-grid">
+						<%= image_tag "n21.jpg" %>
+						</div>
+						<h3>咖啡之声</h3>
+						<p>一杯咖啡2015年5月节目话题征集<br/>
+							你可以把你想听的内容告诉我们，由我们的咨询师通过电台分享给全国的听众，也可以把你的故事告诉我们，由我们的咨询师老师通过电台为你解析，也可以因此帮助更多的人。
+						</p>					
+				</div>
+				<div class="col-md-3 content-top-grid">					
+						<div class="image-grid">
+						<%= image_tag "n31.jpg" %>
+						</div>
+						<h3>相遇在上海</h3>
+						<p>一杯咖啡乐活社群"相遇在上海"<br/>邀请在上海工作并生活的单身的你，加入其中，一起在上海美好地相遇！
+						</p>					
+				</div>
+				<div class="col-md-3 content-top-grid">			
+						<div class="image-grid">
+						<%= image_tag "n41.jpg" %>
+						</div>
+						<h3>咖啡之声</h3>
+						<p>一杯咖啡2015年5月节目话题征集<br/>
+							你可以把你想听的内容告诉我们，由我们的咨询师通过电台分享给全国的听众，也可以把你的故事告诉我们，由我们的咨询师老师通过电台为你解析，也可以因此帮助更多的人。
+						</p>				
+				</div>
+			</div>
+		</div>
+		<!--- container ---->
+	</div>
+	<!--- content ---->
+		<!--- content-about ---->
+		<div id="counsel" class="content-about">
+			<!--- container ---->
+			<div class="container">
+				<div class="content-about-text">
+					<h2>一杯咖啡<small>换</small>一次心理咨询</h2>
+					
+				</div>
+				<div class="row">
+					<div class="col-md-6 content-about-grid-right">
+						<p>
+在很多人眼中，心理咨询很神秘，当然收费也很比较昂贵。为了打破心理咨询的神秘面纱，也为了让更多有需求但是面对高昂收费犹疑不决的人们能够感受到心理咨询 的魅力，由沪上知名心理咨询师团队发起了#一杯咖啡换一次心理咨询#公益活动。每周咨询师老师们拨出一些时间，给到有需要的朋友。
+参加者主要是在上海的朋友，也有个别全国慕名而来的朋友，甚至也有过境上海的国际华人。通过线下面对面的交流，他们诉说自己的故事，寻找内心的正能量，更好地面对生活。
+						</p>
+						<div class="learn">
+							<a href="#">了解更多</a>
+						</div>
+						
+					</div>
+					<div class="col-md-6 content-about-grid-left">
+						<%= image_tag "zixun3.jpg" %>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!--- content-about ---->
+		<!--- content-about ---->
+		<div id="meet" class="content-about grey-bg">
+			<!--- container ---->
+			<div class="container">
+				<div class="content-about-text">
+					<h2>一杯咖啡<small>换</small>一次相遇</h2>
+					
+				</div>
+				<div class="row">
+					<div class="col-md-6 content-about-grid-left">
+						<%= image_tag "xiangyu.jpg" %>
+					</div>
+					<div class="col-md-6 content-about-grid-right">
+						<p>
+是谁都希望能认识一些新朋友，但是见到陌生人总有点担心，怕自己不会说话，怕尴尬，怕不知道对方是什么样的人。
+是谁都希望通过一些可靠的途径认识一些新朋友，而不是在网上有一搭没一搭，然后自然而然地结识一些自己想结识的朋友，而不需要有太大的心理压力。
+是谁都希望与新朋友能够在一个干净、安全、不嘈杂的环境下做一番轻松的交流，然后看看有没有共同的话语以便进一步接触，而不是吃个饭、抹下嘴，其实都没怎么好好地聊过。
+是谁都希望——从朋友做起——
+虽然看起来很简单，但是真的很难找到这样的识友活动。
+而现在，我们邀请你来“一杯咖啡”，用一杯咖啡换一次相遇，遇见一些人，然后对TA说，让我们从朋友做起吧。
+
+						</p>
+						<div class="learn">
+							<a href="#">了解更多</a>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!--- content-about ---->
+
+		<!--- content-about ---->
+		<div id="groupCounsel" class="content-about">
+			<!--- container ---->
+			<div class="container">
+				<div class="content-about-text">
+					<h2>一杯咖啡<small>换</small>一次心灵聚会</h2>
+					
+				</div>
+				<div class="row">
+					<div class="col-md-6 content-about-grid-right">
+						<p>
+在休闲时光，和一群人彼此交流感兴趣的心灵话题、人生体悟，倾诉与倾听彼此的经历，给予温暖和关爱，当然亦可结识一群走心的朋友。
+活动运用心理咨询师团体咨询技术设计，使专业的团体心理活动，也能通过仅仅花费一杯咖啡的价钱，参与进来。
+主题：情感、亲子、职场跟心理类有关的主题均包括在心灵聚会活动之中。主要活动有：“十问”圆桌谈话,“六人行”,人际互动个人成长小组（公益亚隆模式团体）等等。
+						</p>
+						<div class="learn">
+							<a href="#">了解更多</a>
+						</div>
+					</div>
+					<div class="col-md-6 content-about-grid-left">
+						<%= image_tag "groupconsel.jpg" %>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!--- content-about ---->
+		
+		<!--- content-about ---->
+		<div id="grow" class="content-about grey-bg">
+			<!--- container ---->
+			<div class="container">
+				<div class="content-about-text">
+					<h2>心理师成长</h2>
+					
+				</div>
+				<div class="row">
+					<div class="col-md-6 content-about-grid-left">
+						<%= image_tag "grow.jpg" %>
+					</div>
+					<div class="col-md-6 content-about-grid-right">
+						<p>
+在休闲时光，和一群人彼此交流感兴趣的心灵话题、人生体悟，倾诉与倾听彼此的经历，给予温暖和关爱，当然亦可结识一群走心的朋友。
+活动运用心理咨询师团体咨询技术设计，使专业的团体心理活动，也能通过仅仅花费一杯咖啡的价钱，参与进来。
+主题：情感、亲子、职场跟心理类有关的主题均包括在心灵聚会活动之中。主要活动有：“十问”圆桌谈话,“六人行”,人际互动个人成长小组（公益亚隆模式团体）等等。
+
+						</p>
+						<div class="learn">
+							<a href="#">了解更多</a>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!--- content-about ---->
+		
+
+		<!--- content-portfolio ---->
+		<!--- container ---->
+		<div class="container">
+			<div id="activity" class="portfolio">
+				<div class="port-text">
+					<h2>咖啡<small>播报</small></h2>
+				</div>
+				<div class="section" id="section-3">
+					
+					<div id="portfoliolist">
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m1.jpg", :class=>"img-responsive") %>
+								</a>
+								<p>弗洛伊德的礼拜天</p>
+								<h3>精神分析读书会第二期第七次笔记</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+
+							</div>
+						</div>
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m2.jpg", :class=>"img-responsive")  %>
+								</a>
+								<p>《悦己》杂志专访一杯咖啡</p>
+								<h3>用生命影响生命的一群人</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+
+							</div>
+						</div>
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m3.jpg", :class=>"img-responsive") %>
+								</a>
+								<p>咖啡不易喝，咖啡师更难得</p>
+								<h3>面试回顾</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m4.jpg", :class=>"img-responsive") %>
+								</a>
+								<p>时间及文件管理技能</p>
+								<h3>3月26日正能量聚会报名中</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m5.jpg", :class=>"img-responsive") %>
+								</a>
+								<p>一杯咖啡15年社招</p>
+								<h3>我们是家解忧“咖啡馆”</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio fun mix_all" data-cat="fun" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m6.jpg", :class=>"img-responsive") %>
+								</a>
+								<p>一杂志一书一美剧</p>
+								<h3>心理英语学习小组招募中</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="watchmore">
+							<a href="#">发现更多</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Script for gallery Here-->
+			<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+			<script type="text/javascript">
+				$(function () {
+					var filterList = {
+					init: function () {
+			// MixItUp plugin
+			// http://mixitup.io
+							$('#portfoliolist').mixitup({
+								targetSelector: '.portfolio',
+								filterSelector: '.filter',
+								effects: ['fade'],
+								easing: 'snap',
+							// call the hover effect
+							onMixEnd: filterList.hoverEffect()
+				});				
+			},
+					hoverEffect: function () {
+			// Simple parallax effect
+					$('#portfoliolist .portfolio').hover(
+						function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+						},
+								function () {
+									$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+									$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+						}		
+					);				
+				}
+			};
+			// Run the show!
+					filterList.init();
+				});
+			</script>
+			<!--Gallery Script Ends-->
+		</div>
+		<!--- container ---->
+		<!--- content-portfolio ---->
+		<!--- content-Get-in-touch ---->
+		<div id="contact" id="arrow" class="content-Get-in-touch">
+			<!--- container ---->
+			<div class="container">
+				<div class="port-text">
+					<h2>联系<small>我们</small></h2>
+				</div>
+				<div class="Get-in-touch-grids">
+					<div class="col-md-6" style="text-align:center">						
+						<%= image_tag "code.jpg" %>
+						<p>扫一扫加微信</p>
+					</div>
+					<div class="col-md-6">
+						<div class="Get-in-touch-right-grid">
+						<p>
+					✿官网：http://www.yibeikafei.org<br/>
+                    ✿豆瓣小站：一杯咖啡公益心理团队 http://site.douban.com/218994/<br/>
+                    ✿新浪微博：@一杯咖啡换一次相遇 http://weibo.com/psychologistcoffee<br/>
+                    ✿ 电子邮件：coffeecenter@163.com<br/>
+                    ✿微信公众平台号：一杯咖啡 coffeecenter<br/>
+                		</p>
+							<!--<span>T: (202) 456-1111</span>
+							<small>M: (202) 456-1212</small>-->
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="content-portfolio">
+					<a href="#">
+						<%= image_tag "ftr1.png" %>
+					</a>
+					<p>Copyright &copy; 2014.Company name All rights reserved.
+					</p>
+				</div>
+			</div>
+			<!--- container ---->
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+		</script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span>
+		</a>
+		<!--- content-Get-in-touch ---->
+		<div style="display:none">
+			<script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
+		</div>

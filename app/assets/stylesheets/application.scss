@@ -12,4 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require owl.carousel
  */
+// Bootstrap 3
+@import "bootstrap";
+@import "font-awesome";
+@import "summernote";
+@import "codemirror";
+@import "codemirror/themes/solarized";
+@import "posts";

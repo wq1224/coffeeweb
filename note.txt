@@ -1,0 +1,36 @@
+rails generate model Member username:string password:string email:string phone:string type:string
+rails generate model Category name:string
+rails generate model Post category_id:integer title:string content:text creator_id:integer status:string type:string
+rails generate migration add_image_to_posts image:string
+rails generate migration add_brief_to_posts brief:string
+rails generate migration add_status_to_members status:integer
+rails generate model ActivityAttribute  start_at:datetime end_at:datetime
+
+
+rake routes
+       Prefix Verb   URI Pattern               Controller#Action
+welcome_index GET    /welcome/index(.:format)  welcome#index
+         root GET    /                         welcome#index
+        posts GET    /posts(.:format)          posts#index
+              POST   /posts(.:format)          posts#create
+     new_post GET    /posts/new(.:format)      posts#new
+    edit_post GET    /posts/:id/edit(.:format) posts#edit
+         post GET    /posts/:id(.:format)      posts#show
+              PATCH  /posts/:id(.:format)      posts#update
+              PUT    /posts/:id(.:format)      posts#update
+              DELETE /posts/:id(.:format)      posts#destroy
+
+rails g controller posts
+      create  app/controllers/posts_controller.rb
+      invoke  erb
+      create    app/views/posts
+      invoke  test_unit
+      create    test/controllers/posts_controller_test.rb
+      invoke  helper
+      create    app/helpers/posts_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/posts.coffee
+      invoke    scss
+      create      app/assets/stylesheets/posts.scss
