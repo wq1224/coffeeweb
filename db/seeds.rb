@@ -7,11 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 c1 = Category.new(:name=>"咖啡相遇")
 c1.save
-c2 = Category.new(:name=>"咖啡相遇")
+c2 = Category.new(:name=>"心理咨询")
 c2.save
-c3 = Category.new(:name=>"咖啡相遇")
+c3 = Category.new(:name=>"心灵聚会")
 c3.save
-c4 = Category.new(:name=>"咖啡相遇")
+c4 = Category.new(:name=>"心理师成长")
 c4.save
-c5 = Category.new(:name=>"咖啡相遇")
-c5.save
