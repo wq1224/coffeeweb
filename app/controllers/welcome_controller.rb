@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-  	@posts = Post.all
+  	@activities = Activity.last(4)
+  	@posts = Post.last(6)
   end
 end

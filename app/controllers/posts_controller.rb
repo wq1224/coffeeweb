@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
   def new
+  	@categories = Category.all.collect { |category| [category.name,category.id] } 
   end
 
   def create
-    @post = Post.new(post_params)
-    binding.pry
+  	if(params[:is_activity])
+  	  @post = Activity.new(post_params)
+  	else
+  	  @post = Post.new(post_params)
+  	end
     @post.save
     redirect_to @post
   end
@@ -19,6 +23,6 @@ class PostsController < ApplicationController
    
   private
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content,:image,:image_cache, :category_id)
     end
 end

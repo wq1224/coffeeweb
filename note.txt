@@ -34,3 +34,42 @@ rails g controller posts
       create      app/assets/javascripts/posts.coffee
       invoke    scss
       create      app/assets/stylesheets/posts.scss
+
+rails generate uploader Image
+
+
+				<div class="col-md-3 content-top-grid">					
+						<div class="image-grid">
+						<%= image_tag "xiangyu.jpg" %>
+						</div>
+						<h3>相遇在上海</h3>
+						<p>一杯咖啡乐活社群"相遇在上海"<br/>
+							邀请在上海工作并生活的单身的你，加入其中，一起在上海美好地相遇！
+						</p>					
+				</div>
+				<div class="col-md-3 content-top-grid">					
+						<div class="image-grid">
+						<%= image_tag "n21.jpg" %>
+						</div>
+						<h3>咖啡之声</h3>
+						<p>一杯咖啡2015年5月节目话题征集<br/>
+							你可以把你想听的内容告诉我们，由我们的咨询师通过电台分享给全国的听众，也可以把你的故事告诉我们，由我们的咨询师老师通过电台为你解析，也可以因此帮助更多的人。
+						</p>					
+				</div>
+				<div class="col-md-3 content-top-grid">					
+						<div class="image-grid">
+						<%= image_tag "n31.jpg" %>
+						</div>
+						<h3>相遇在上海</h3>
+						<p>一杯咖啡乐活社群"相遇在上海"<br/>邀请在上海工作并生活的单身的你，加入其中，一起在上海美好地相遇！
+						</p>					
+				</div>
+				<div class="col-md-3 content-top-grid">			
+						<div class="image-grid">
+						<%= image_tag "n41.jpg" %>
+						</div>
+						<h3>咖啡之声</h3>
+						<p>一杯咖啡2015年5月节目话题征集<br/>
+							你可以把你想听的内容告诉我们，由我们的咨询师通过电台分享给全国的听众，也可以把你的故事告诉我们，由我们的咨询师老师通过电台为你解析，也可以因此帮助更多的人。
+						</p>				
+				</div>

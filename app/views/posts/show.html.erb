@@ -7,4 +7,6 @@
   <strong>Text:</strong>
   <%= truncate(strip_tags(@post.content), :length=>100) %>
   <%= raw(@post.content) %>
+  <%= image_tag(@post.image_url(:large)) if @post.image? %>
+  <%= image_tag(@post.image_url(:small)) if @post.image? %>
 </p>
