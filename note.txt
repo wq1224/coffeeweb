@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS coffeeweb DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 rails generate model Member username:string password:string email:string phone:string type:string
 rails generate model Category name:string
 rails generate model Post category_id:integer title:string content:text creator_id:integer status:string type:string
@@ -73,3 +74,79 @@ rails generate uploader Image
 							你可以把你想听的内容告诉我们，由我们的咨询师通过电台分享给全国的听众，也可以把你的故事告诉我们，由我们的咨询师老师通过电台为你解析，也可以因此帮助更多的人。
 						</p>				
 				</div>
+
+
+				<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m1.jpg", :class=>"img-responsive") %>
+								</a>
+								<p>弗洛伊德的礼拜天</p>
+								<h3>精神分析读书会第二期第七次笔记</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+
+							</div>
+						</div>
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m2.jpg", :class=>"img-responsive")  %>
+								</a>
+								<p>《悦己》杂志专访一杯咖啡</p>
+								<h3>用生命影响生命的一群人</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+
+							</div>
+						</div>
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m3.jpg", :class=>"img-responsive") %>
+								</a>
+								<p>咖啡不易喝，咖啡师更难得</p>
+								<h3>面试回顾</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m4.jpg", :class=>"img-responsive") %>
+								</a>
+								<p>时间及文件管理技能</p>
+								<h3>3月26日正能量聚会报名中</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m5.jpg", :class=>"img-responsive") %>
+								</a>
+								<p>一杯咖啡15年社招</p>
+								<h3>我们是家解忧“咖啡馆”</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio fun mix_all" data-cat="fun" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
+								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<%= image_tag("m6.jpg", :class=>"img-responsive") %>
+								</a>
+								<p>一杂志一书一美剧</p>
+								<h3>心理英语学习小组招募中</h3>
+								<div class="tour-caption">
+									<span> </span>
+								</div>
+							</div>
+						</div>

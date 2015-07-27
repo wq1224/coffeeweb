@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   resources :posts
 
+  get '/categories/:id/posts' => 'posts#show_by_categories'
+  get 'activities' => 'activities#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

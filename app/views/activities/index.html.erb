@@ -1,0 +1,76 @@
+		<!--- header-top ---->
+		<!--- header-bottom ---->
+		<!-- Sticky Nav -->
+		<div id="header-nav" class="header-nav">
+			<div class="top-nav">
+				<nav>
+					<div class="logo">
+						<a href="#">
+							<%= image_tag "logo2.png" %>
+						</a>
+					</div>
+					<span class="menu"></span>
+					<ul>
+						<li class="active"><a class="scroll" href="#home">首页</a>
+						</li>
+						<li><a class="scroll" href="#counsel">心理咨询</a>
+						</li>
+						<li><a class="scroll" href="#meet">咖啡相遇</a>
+						</li>
+						<li><a class="scroll" href="#groupCounsel">心灵聚会</a>
+						</li>
+						<li><a class="scroll" href="#grow">心理师成长</a>
+						</li>
+						<li><a class="scroll" href="#enter">活动报名</a>
+						</li>
+						<li><a class="scroll" href="#activity">咖啡播报</a>
+						</li>
+						<li class="contact"><a class="scroll" href="#contact">联系我们</a>
+						</li>	
+						<div class="clearfix"> </div>	
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- top-nav -->
+		<!-- Sticky Nav --->
+<!--- content ---->
+		<!--- container ---->
+		<div class="container">		
+			<div class="row">
+				<div class="col-md-9">
+				<h2>最新活动</h2>
+				<% @activities.each do |activity| %>
+				  <div class="row post-list-item">
+				  	    <div class="col-md-2">
+						<%= image_tag(activity.image_url(:small),:class=>"post-list-img") if activity.image? %>
+						</div>
+						<div class="col-md-10">
+						<%= link_to activity.title, post_path(activity),{:class => "post-list-title"} %><br>
+						<%= truncate(strip_tags(activity.content), :length=>400) %>
+						</div>	
+				  </div>
+                <% end %>
+            </div>
+            <div class="col-md-3">
+	          <h4>最新动态</h4>
+	          <% @latest_posts.each do |post| %>
+	            <%= link_to post.title, post_path(post) %><br>
+	          <% end %>
+	       </div>
+		   </div>
+    </div> 
+
+		<div id="contact" id="arrow" class="content-Get-in-touch">
+			<!--- container ---->
+			<div class="container">
+				<div class="content-portfolio">
+					<a href="#">
+						<%= image_tag "ftr1.png" %>
+					</a>
+					<p>Copyright &copy; 2014.Company name All rights reserved.
+					</p>
+				</div>
+			</div>
+			<!--- container ---->
+		</div>

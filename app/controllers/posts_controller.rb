@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   	else
   	  @post = Post.new(post_params)
   	end
-    @post.save
+    @post.save!
     redirect_to @post
   end
   
