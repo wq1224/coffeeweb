@@ -15,10 +15,17 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.find(params[:id])
+    @latest_posts = Post.last(10)
   end
   
   def index
     @posts = Post.all
+  end
+
+  def show_by_categories
+    @category = Category.find(params[:id])
+    @posts = Post.where(category:params[:id])
+    @latest_posts = Post.last(10)
   end
    
   private

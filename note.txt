@@ -6,7 +6,7 @@ rails generate migration add_image_to_posts image:string
 rails generate migration add_brief_to_posts brief:string
 rails generate migration add_status_to_members status:integer
 rails generate model ActivityAttribute  start_at:datetime end_at:datetime
-
+rails generate migration add_desc_to_categories desc:text
 
 rake routes
        Prefix Verb   URI Pattern               Controller#Action

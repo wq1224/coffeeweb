@@ -1,11 +1,17 @@
-  <%= render "shared/header" %>
+<%= render "shared/header" %>
 <!--- content ---->
 		<!--- container ---->
 		<div class="container">		
 			<div class="row">
 				<div class="col-md-9">
-				<h2><%= @post.title%></h2>
-				<%= raw(@post.content) %>
+				<h2><%=@category.name%></h2>
+				<%= raw(@category.desc) %>
+				<% @posts.each do |post| %>
+				  <div class="post-list-item">   
+						<%= link_to post.title, post_path(post),{:class => "post-list-title"} %><br>
+						<%= truncate(strip_tags(post.content), :length=>400) %>
+				  </div>
+                <% end %>
             </div>
             <div class="col-md-3">
 	          <h4>最新动态</h4>
@@ -29,13 +35,3 @@
 			</div>
 			<!--- container ---->
 		</div>
-  <strong>Title:</strong>
-  <%= @post.title %>
- 
-<p>
-  <strong>Text:</strong>
-  <%= truncate(strip_tags(@post.content), :length=>100) %>
-  <%= raw(@post.content) %>
-  <%= image_tag(@post.image_url(:large)) if @post.image? %>
-  <%= image_tag(@post.image_url(:small)) if @post.image? %>
-</p>
