@@ -26,6 +26,7 @@ class PostsController < ApplicationController
     @category = Category.find(params[:id])
     @posts = Post.where(category:params[:id])
     @latest_posts = Post.last(10)
+    @categories = Category.all
   end
    
   private

@@ -103,7 +103,7 @@
 				<% @activities.each do |activity| %>
 				  <div class="col-md-3 content-top-grid">
 						<div class="image-grid">
-						<%= image_tag(activity.image_url(:small)) if activity.image? %>
+						<%= link_to image_tag(activity.image_url(:small)), post_path(activity) if activity.image? %>
 						</div>
 						<h3><%= activity.title %></h3>
 						<%= truncate(strip_tags(activity.content), :length=>100) %>					
@@ -129,7 +129,7 @@
 参加者主要是在上海的朋友，也有个别全国慕名而来的朋友，甚至也有过境上海的国际华人。通过线下面对面的交流，他们诉说自己的故事，寻找内心的正能量，更好地面对生活。
 						</p>
 						<div class="learn">
-							<a href="#">了解更多</a>
+							<%= link_to '了解更多', {:controller => "posts", :action => "show_by_categories",:id =>1}%>
 						</div>
 						
 					</div>
@@ -164,7 +164,7 @@
 
 						</p>
 						<div class="learn">
-							<a href="#">了解更多</a>
+						<%= link_to '了解更多', {:controller => "posts", :action => "show_by_categories",:id =>2}%>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -189,7 +189,7 @@
 主题：情感、亲子、职场跟心理类有关的主题均包括在心灵聚会活动之中。主要活动有：“十问”圆桌谈话,“六人行”,人际互动个人成长小组（公益亚隆模式团体）等等。
 						</p>
 						<div class="learn">
-							<a href="#">了解更多</a>
+							<%= link_to '了解更多', {:controller => "posts", :action => "show_by_categories",:id =>3}%>
 						</div>
 					</div>
 					<div class="col-md-6 content-about-grid-left">
@@ -221,7 +221,7 @@
 
 						</p>
 						<div class="learn">
-							<a href="#">了解更多</a>
+						<%= link_to '了解更多', {:controller => "posts", :action => "show_by_categories",:id =>4}%>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
