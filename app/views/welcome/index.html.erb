@@ -109,6 +109,10 @@
 						<%= truncate(strip_tags(activity.content), :length=>100) %>					
 				  </div>
                 <% end %>
+                	<div class="clearfix"></div>
+						<div class="watchmore">
+							<%= link_to '发现更多', {:controller => "activities", :action => "list"}%>
+						</div>
 			</div>
 		</div>
 		<!--- container ---->
@@ -258,7 +262,7 @@
 
 						<div class="clearfix"></div>
 						<div class="watchmore">
-							<a href="#">发现更多</a>
+							<%= link_to '发现更多', {:controller => "posts", :action => "list"}%>
 						</div>
 					</div>
 				</div>

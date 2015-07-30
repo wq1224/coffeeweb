@@ -13,9 +13,16 @@ class PostsController < ApplicationController
     redirect_to @post
   end
   
+  def list
+    @posts = Post.all
+    @latest_posts = Post.last(10)
+    @categories = Category.all
+  end
+
   def show
     @post = Post.find(params[:id])
     @latest_posts = Post.last(10)
+    @categories = Category.all
   end
   
   def index

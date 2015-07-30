@@ -1,11 +1,21 @@
-  <%= render "shared/header" %>
+<%= render "shared/header" %>
 <!--- content ---->
 		<!--- container ---->
 		<div class="container">		
 			<div class="row">
 				<div class="col-md-9">
-				<h2><%= @post.title%></h2>
-				<%= raw(@post.content) %>
+				<h2>所有文章</h2>
+				<% @posts.each do |post| %>
+				  <div class="row post-list-item">
+				  	    <div class="col-md-2">
+						<%= link_to image_tag(post.image_url(:small),:class=>"post-list-img"), post_path(post) if post.image? %>
+						</div>
+						<div class="col-md-10">
+						<%= link_to post.title, post_path(post),{:class => "post-list-title"} %><br>
+						<%= truncate(strip_tags(post.content), :length=>400) %>
+						</div>	
+				  </div>
+                <% end %>
             </div>
             <div class="col-md-3">
 	          <h4>最新动态</h4>

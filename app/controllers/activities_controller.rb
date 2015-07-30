@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  def index
+  def list
     @activities = Activity.all
     @categories = Category.all
     @latest_posts = Post.last(10)
