@@ -105,7 +105,7 @@
 						<div class="image-grid">
 						<%= link_to image_tag(activity.image_url(:small)), post_path(activity) if activity.image? %>
 						</div>
-						<h3><%= activity.title %></h3>
+						<h5><%= truncate(activity.title, :length=>22)%></h5>
 						<%= truncate(strip_tags(activity.content), :length=>100) %>					
 				  </div>
                 <% end %>
