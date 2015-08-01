@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Coffeeweb</title>
+  <title>一杯咖啡心理咖啡烹饪中请静候别关掉</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -9,6 +9,7 @@
   <%= csrf_meta_tags %>
   <script type="text/javascript">
 			jQuery(document).ready(function($) {
+				document.title = "一杯咖啡";
 				$(".scroll").click(function(event){		
 					event.preventDefault();
 					if($(this).parent().parent().attr("class") == "header-top-grids" ||$(this).parent().parent().parent().attr("class") == "header-bottom-grids"  )
