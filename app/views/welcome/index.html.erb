@@ -248,7 +248,7 @@
 								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
 									<%= image_tag(post.image_url(:large), :class=>"img-responsive") if post.image?  %>
 								</a>
-								<%= post.title %>
+								<h4><%=link_to truncate(post.title,:length=>20), post_path(post) %><h4>
 								<h3><%= truncate(strip_tags(post.content), :length=>20) %></h3>
 								<div class="tour-caption">
 									<span> </span>
