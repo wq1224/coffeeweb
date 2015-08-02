@@ -31,5 +31,7 @@
 //= require codemirror/modes/slim
 //= require codemirror/modes/php
 //= require summernote
+//= require jquery.mixitup.min
+//= require move-top
 //= require_tree .
 //= require turbolinks

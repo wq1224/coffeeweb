@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'activities/list' => 'activities#list'
   get '/categories/:id/posts' => 'posts#show_by_categories'
   resources :posts
+  resources :categories
 
 
 

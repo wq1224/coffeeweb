@@ -1424,7 +1424,7 @@ margin-top: 5em;
 .Get-in-touch-icons a span{
 	width:55px;
 	height:60px;
-	background:url('../images/get-icons.png') no-repeat 0px 0px;
+	background:asset-url('get-icons.png') no-repeat 0px 0px;
 	display:inline-block;
 }
 .Get-in-touch-icons span.icon1{
@@ -1475,7 +1475,7 @@ color:#646064;
 	height: 40px;
 	border: none;
 	text-indent: 100%;
-	background: url("../images/to-top1.png") no-repeat 0px 0px;
+	background: asset-url("to-top1.png") no-repeat 0px 0px;
 }
 #toTopHover {
 	width: 40px;

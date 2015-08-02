@@ -3,6 +3,25 @@ class PostsController < ApplicationController
   	@categories = Category.all.collect { |category| [category.name,category.id] } 
   end
 
+  def edit
+    @categories = Category.all.collect { |category| [category.name,category.id] } 
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    # if(params[:is_activity])
+    #   @post = Post.find(params[:id])
+    # else
+    #   @post = Activity.find(params[:id])
+    # end
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to @post
+    else
+      render 'edit'
+    end
+  end
+
   def create
   	if(params[:is_activity])
   	  @post = Activity.new(post_params)
