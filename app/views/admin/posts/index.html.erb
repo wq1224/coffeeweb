@@ -1,0 +1,7 @@
+<h3>文章列表</h3>
+<% @posts.each do |post| %>
+   <div class="post-list-item">   
+      <h4><%= link_to truncate(post.title,:length=>50), edit_admin_post_path(post) %></h4>
+      <%= truncate(strip_tags(post.content), :length=>100) %>
+    </div>
+<% end %>

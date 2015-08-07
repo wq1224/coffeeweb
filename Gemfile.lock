@@ -48,6 +48,7 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    cancancan (1.12.0)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -171,6 +172,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   byebug
+  cancancan (~> 1.10)
   carrierwave
   codemirror-rails
   coffee-rails (~> 4.1.0)

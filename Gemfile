@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'simple_form'
 
+gem 'cancancan', '~> 1.10'
+
 # You'll need to include the following dependencies of Summernote
 gem 'bootstrap-sass'
 gem "font-awesome-rails"

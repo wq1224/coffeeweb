@@ -1,4 +1,4 @@
-<%= simple_form_for(@post,url: post_path(@post), method: :patch, :html => {novalidate: true, multipart: true}) do |f| %>
+<%= simple_form_for(:post,url: admin_posts_path,:html => {novalidate: true, multipart: true}) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-group">
