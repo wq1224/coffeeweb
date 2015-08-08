@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   namespace :admin do
-    resources :categories, :posts
+    resources :categories, :posts, :members
   end
   get 'posts/list' => 'posts#list'
   get 'activities/list' => 'activities#list'

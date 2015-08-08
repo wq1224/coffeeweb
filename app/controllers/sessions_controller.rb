@@ -14,10 +14,21 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    log_out
+    redirect_to login_path
   end
 
   def log_in(member)
     session[:user_id] = member.id
+  end
+  
+  def current_user
+    @current_user ||= Member.find_by(id: session[:user_id])
+  end
+  
+  def log_out
+    session.delete(:user_id)
+    @current_user = nil
   end
 
 end

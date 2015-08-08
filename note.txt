@@ -9,6 +9,8 @@ rails generate model ActivityAttribute  start_at:datetime end_at:datetime
 rails generate migration add_desc_to_categories desc:text
 rails g cancan:ability
 rails generate controller Sessions new
+rails g controller admin/posts
+rails g controller admin/members
 
 rake routes
        Prefix Verb   URI Pattern               Controller#Action
