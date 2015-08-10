@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+<h3>栏目信息</h3>
+<h2><%= @category.name%></h2>
+<%= raw(@category.desc) %>
+<br/>
+<%= link_to '更新', edit_admin_category_path(@category) %> |
+<%= link_to '返回列表', admin_categories_path %>

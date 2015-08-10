@@ -1,0 +1,24 @@
+<%= simple_form_for(@category,url: admin_category_path, method: :patch,:html => {novalidate: true, multipart: true}) do |f| %>
+  <% if @category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+      <% @category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %> 
+  <div class="form-group">
+    <%= f.input :name, input_html:{class:'form-control'} %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :desc, class:'summernote' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.button :submit, class:'btn btn-default' %>
+  </div>
+<% end %>

@@ -1,26 +1,25 @@
-<%= simple_form_for(:post,url: admin_posts_path,:html => {novalidate: true, multipart: true}) do |f| %>
+<h3>新建用户</h3>
+<%= simple_form_for(@member,url: admin_members_path(@member), :html => {novalidate: true, multipart: true}) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-group">
-    <%= f.input :title, input_html:{class:'form-control'} %>
+    <%= f.input :username, input_html:{class:'form-control'} %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.input :password, input_html:{class:'form-control'} %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.input :email, input_html:{class:'form-control'} %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.input :phone, input_html:{class:'form-control'} %>
   </div>
 
-  <div class="field">
-    <%= f.file_field :image %>
-    <%= f.hidden_field :image_cache %>
-  </div>
-
   <div class="form-group">
-     <%=f.select :category_id, @categories, :prompt=>"请选择"%> 
-  </div>
-  <div class="form-group">
-    <div class="controls">
-      <label class="checkbox">是否为活动</label>
-      <input type="checkbox" value="true" name="is_activity" checked="checked">
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.input :content, class:'summernote' %>
+     <%=f.select :status, @statuses, :prompt=>"请选择"%> 
   </div>
 
   <div class="form-group">
