@@ -2,20 +2,20 @@
 <table class="table">
    <thead>
       <tr>
-         <td>文章标题</td>
-         <td>文章内容</td>
-         <td>类型</td>
-         <td>状态</td>
-         <td>创建时间</td>
-         <td>修改时间</td>
-         <td>操作</td>
+         <td width="15%">文章标题</td>
+         <td width="30%">文章内容</td>
+         <td width="10%">类型</td>
+         <td width="10%">状态</td>
+         <td width="10%">创建时间</td>
+         <td width="10%">修改时间</td>
+         <td width="15%">操作</td>
       </tr>
    </thead>
  <tbody>
 <% @posts.each do |post| %>
    <tr>
-      <td><%= truncate(post.title,:length=>50) %></td>
-      <td><%= truncate(strip_tags(post.content), :length=>100) %></td>
+      <td><%= truncate(post.title,:length=>30) %></td>
+      <td><%= truncate(strip_tags(post.content), :length=>50) %></td>
       <td><%= post.type%></td>
       <td><%= post.status%></td>
       <td><%= post.created_at%></td>

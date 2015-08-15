@@ -17,7 +17,7 @@
       <td><%= member.email%></td>
       <td><%= member.phone%></td>
       <td><%= member.type%></td>
-      <td><%= member.status.humanize%></td>
+      <td><%= member.status%></td>
       <td><%= member.created_at%></td>
       <td><%= link_to '查看', admin_member_path(member) %>
       <%= link_to '编辑', edit_admin_member_path(member) %>
