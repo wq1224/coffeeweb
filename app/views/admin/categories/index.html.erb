@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h3>栏目信息</h3>
-
+<%= link_to '新建栏目', new_admin_category_path %>
 <table class='table'>
   <thead>
     <tr>
-      <th>栏目名</th>
-      <th>栏目描述</th>
-      <th>操作</th>
+      <th width="20%">栏目名</th>
+      <th width="60%">栏目描述</th>
+      <th width="20%">操作</th>
     </tr>
   </thead>
 
@@ -25,5 +25,3 @@
 </table>
 
 <br>
-
-<%= link_to '新建栏目', new_admin_category_path %>

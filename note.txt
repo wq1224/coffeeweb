@@ -12,6 +12,7 @@ rails generate controller Sessions new
 rails g controller admin/posts
 rails g controller admin/members
 rails generate migration change_content_to_posts content:longtext
+rails generate migration add_activity_id_to_activity_attributes activity_id:integer
 
 rake routes
        Prefix Verb   URI Pattern               Controller#Action

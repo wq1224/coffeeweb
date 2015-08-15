@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150815084925) do
+ActiveRecord::Schema.define(version: 20150815142719) do
 
   create_table "activity_attributes", force: :cascade do |t|
     t.datetime "start_at"
     t.datetime "end_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.integer  "activity_id", limit: 4
   end
 
   create_table "categories", force: :cascade do |t|
