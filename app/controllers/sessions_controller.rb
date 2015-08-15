@@ -1,14 +1,15 @@
 class SessionsController < ApplicationController
+  layout 'admin'
   def new
   end
 
   def create
     member = Member.find_by(username: params[:session][:username].downcase)
-    if member
+    if member && member.authenticate(params[:session][:password])
       log_in member
       redirect_to admin_posts_path
     else
-      flash.now[:danger]= 'Invalid email/password combination' 
+      flash.now[:danger]= '错误的用户名或密码' 
       render 'new'
     end
   end

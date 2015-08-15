@@ -10,17 +10,21 @@
          <td>创建时间</td>
       </tr>
    </thead>
+ <tbody>
  <% @members.each do |member| %>
    <tr>
-      <td><%= link_to member.username, edit_admin_member_path(member) %></td>
+      <td><%= member.username%></td>
       <td><%= member.email%></td>
       <td><%= member.phone%></td>
       <td><%= member.type%></td>
+      <td><%= member.status%></td>
       <td><%= member.created_at%></td>
-      <td><%= link_to '编辑', edit_admin_member_path(member) %></td>
-      <td><%= link_to '删除',  admin_member_path(member),method: :delete %></td>
+      <td><%= link_to '查看', admin_member_path(member) %>
+      <%= link_to '编辑', edit_admin_member_path(member) %>
+      <%= link_to '删除',  admin_member_path(member),method: :delete %></td>
     </tr>
  <% end %>
+ </tbody>
 </table>
 
 <%= link_to '新建用户', new_admin_member_path %>

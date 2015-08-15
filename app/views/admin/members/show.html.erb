@@ -1,3 +1,12 @@
 <h3>用户信息</h3>
-<%= @member.username%>
-<%= @member.email%>
+<ul class="list-group">
+    <li class='list-group-item'>用户名：<%= @member.username%></li>
+    <li class='list-group-item'>邮箱：<%= @member.email%></li>
+    <li class='list-group-item'>电话：<%= @member.phone%></li>
+    <li class='list-group-item'>类型：<%= @member.type%></li>
+    <li class='list-group-item'>状态：<%= @member.status%></li>
+    <li class='list-group-item'>创建时间：<%= @member.created_at%></li>
+    <li class='list-group-item'>更新时间：<%= @member.updated_at%></li>
+</ul>
+<%= link_to '更新', edit_admin_member_path(@member) %> |
+<%= link_to '返回列表', admin_members_path %>
