@@ -11,6 +11,7 @@ rails g cancan:ability
 rails generate controller Sessions new
 rails g controller admin/posts
 rails g controller admin/members
+rails generate migration change_content_to_posts content:longtext
 
 rake routes
        Prefix Verb   URI Pattern               Controller#Action

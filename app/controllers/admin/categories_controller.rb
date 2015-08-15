@@ -15,7 +15,6 @@ class Admin::CategoriesController <  Admin::AdminController
 
   # GET /admin/categories/new
   def new
-    @category = Category.new
   end
 
   # GET /admin/categories/1/edit
@@ -30,10 +29,16 @@ class Admin::CategoriesController <  Admin::AdminController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to admin_category_path(@category), notice: 'Category was successfully created.' }
+        format.html {
+          flash[:success] = '创建成功'
+          redirect_to admin_category_path(@category)
+        }
         format.json { render :show, status: :created, location: @category }
       else
-        format.html { render :new }
+        format.html { 
+          flash.now[:error] = '创建失败'
+          render :new
+        }
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end
     end
@@ -45,10 +50,16 @@ class Admin::CategoriesController <  Admin::AdminController
     
     respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to admin_category_url(@category), notice: '更新成功' }
+        format.html {
+          flash[:success] = '更新成功'
+          redirect_to admin_category_url(@category)
+        }
         format.json { render :show, status: :ok, location: @category }
       else
-        format.html { render :edit }
+        format.html {
+          flash.now[:error] = '更新失败'
+          render :edit
+        }
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end
     end
@@ -59,7 +70,10 @@ class Admin::CategoriesController <  Admin::AdminController
   def destroy
     @category.destroy
     respond_to do |format|
-      format.html { redirect_to admin_categories_url, notice: 'Category was successfully destroyed.' }
+      format.html {
+        flash[:success] = "删除成功"
+        redirect_to admin_categories_url
+      }
       format.json { head :no_content }
     end
   end

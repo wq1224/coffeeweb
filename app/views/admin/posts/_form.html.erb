@@ -1,0 +1,34 @@
+<%= simple_form_for([:admin, @post], as: :post, :html => {novalidate: true, multipart: true}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-group">
+    <%= f.input :title,input_html:{class:'form-control'} %>
+  </div>
+
+  <div class="field">
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+  </div>
+
+  <div class="form-group">
+     <%=f.select :category_id, @categories, :prompt=>"请选择"%> 
+  </div>
+  <div class="form-group">
+    <div class="controls">
+      <label class="checkbox">是否为活动</label>
+      <input type="checkbox" value="Activity" name="post[type]" checked="checked">
+    </div>
+  </div>
+  
+  <div class="form-group">
+     <%=f.select :status, @statuses, :prompt=>"请选择"%> 
+  </div>
+  
+  <div class="form-group">
+    <%= f.input :content, class:'summernote' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.button :submit, class:'btn btn-default' %>
+  </div>
+<% end %>

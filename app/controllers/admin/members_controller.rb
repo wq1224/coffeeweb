@@ -55,7 +55,7 @@ class Admin::MembersController < Admin::AdminController
     @member.destroy
     respond_to do |format|
       format.html { 
-        flash[:success] = "用户已成功删除"
+        flash[:success] = "删除成功"
         redirect_to admin_members_url
       }
       format.json { head :no_content }

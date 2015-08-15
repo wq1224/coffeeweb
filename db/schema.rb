@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150728154230) do
+ActiveRecord::Schema.define(version: 20150815084925) do
 
   create_table "activity_attributes", force: :cascade do |t|
     t.datetime "start_at"
@@ -41,12 +41,12 @@ ActiveRecord::Schema.define(version: 20150728154230) do
   create_table "posts", force: :cascade do |t|
     t.integer  "category_id", limit: 4
     t.string   "title",       limit: 255
-    t.text     "content",     limit: 65535
+    t.text     "content",     limit: 4294967295
     t.integer  "creator_id",  limit: 4
-    t.string   "status",      limit: 255
+    t.integer  "status",      limit: 4
     t.string   "type",        limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "image",       limit: 255
   end
 

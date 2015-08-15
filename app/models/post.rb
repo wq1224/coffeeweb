@@ -3,7 +3,12 @@ class Post < ActiveRecord::Base
   belongs_to :creator, :class_name => 'Member', :foreign_key => 'creator_id'
   mount_uploader :image, ImageUploader
   #after_save :abstract_image
-
+  POST_STATUS_DRAFT = :post_status_draft
+  POST_STATUS_PUBLISH = :post_status_publish
+  enum status: [
+    POST_STATUS_DRAFT,
+    POST_STATUS_PUBLISH
+  ]
   def abstract_image
     html_doc = Nokogiri::HTML::DocumentFragment.parse(content)
     if img = html_doc.css('img').first

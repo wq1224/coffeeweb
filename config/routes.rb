@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :categories, :posts, :members
     resources :normals, :admins, :super_admin ,controller: 'members'
+    resources :activities, controller: 'posts'
   end
   get 'posts/list' => 'posts#list'
   get 'activities/list' => 'activities#list'
