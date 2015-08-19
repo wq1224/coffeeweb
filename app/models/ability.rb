@@ -5,7 +5,17 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
     if user
-        can :manage, :all
+        if user.class == SuperAdmin
+          can :manage, :all
+        elsif user.class == Admin
+          can :manage, Post
+          can :read, Member
+          can :read, Admin
+          can :read, Normal 
+          can :update, Member
+          can :update, Admin
+          can :update, Normal 
+        end           
     end
     #
     # The first argument to `can` is the action you are giving the user
