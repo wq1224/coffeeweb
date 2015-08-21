@@ -6,19 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag params[:controller] %>
   <%= csrf_meta_tags %>
   <script type="text/javascript">
-			jQuery(document).ready(function($) {
-				document.title = "一杯咖啡";
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					if($(this).parent().parent().attr("class") == "header-top-grids" ||$(this).parent().parent().parent().attr("class") == "header-bottom-grids"  )
-						$('html,body').animate({scrollTop:($(this.hash).offset().top-$(".top-nav").height())},1000);
-					else
-						$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
+  	jQuery(document).ready(function($) {
+  		document.title = "一杯咖啡";
+  	});
+  </script>
 </head>
 <body>
 

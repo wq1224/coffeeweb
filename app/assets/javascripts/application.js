@@ -16,5 +16,4 @@
 //= require jquery.mixitup.min
 //= require move-top
 //= require easing
-//= require_tree .
 //= require turbolinks
