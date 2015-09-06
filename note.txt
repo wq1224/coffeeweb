@@ -1,3 +1,5 @@
+  <%= javascript_include_tag params[:controller] %>
+  <%= stylesheet_link_tag    params[:controller], media: 'all'  %>
 CREATE DATABASE IF NOT EXISTS coffeeweb DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 rails generate model Member username:string password:string email:string phone:string type:string
 rails generate model Category name:string

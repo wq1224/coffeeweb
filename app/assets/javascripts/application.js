@@ -11,4 +11,4 @@
 // about supported directives.
 //
 //= require move-top
-//= require turbolinks
+//= require welcome
