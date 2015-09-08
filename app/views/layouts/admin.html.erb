@@ -4,8 +4,35 @@
   <title>一杯咖啡后台管理系统</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="//cdn.bootcss.com/summernote/0.6.16/summernote.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/codemirror.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/ruby/ruby.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/sass/sass.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/shell/shell.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/sql/sql.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/slim/slim.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/nginx/nginx.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/markdown/markdown.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/javascript/javascript.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/http/http.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/haml/haml.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/xml/xml.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/css/css.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/yaml/yaml.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/slim/slim.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.6.0/mode/php/php.min.js"></script>
+  <%= javascript_include_tag params[:controller] %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    params[:controller], media: 'all'  %>
+  <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/summernote/0.6.16/summernote.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/codemirror/5.6.0/codemirror.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/codemirror/5.6.0/theme/solarized.min.css" rel="stylesheet">
 
   <%= csrf_meta_tags %>
 </head>

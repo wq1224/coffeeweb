@@ -1,4 +1,3 @@
-//= require codemirror
 //= require codemirror/modes/ruby
 //= require codemirror/modes/sass
 //= require codemirror/modes/shell
@@ -15,5 +14,3 @@
 //= require codemirror/modes/yaml
 //= require codemirror/modes/slim
 //= require codemirror/modes/php
-//= require summernote
-//= require_tree .

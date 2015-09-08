@@ -11,4 +11,5 @@
 // about supported directives.
 //
 //= require move-top
+//= require jquery_ujs
 //= require welcome
