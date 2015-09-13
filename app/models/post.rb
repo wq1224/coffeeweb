@@ -9,6 +9,10 @@ class Post < ActiveRecord::Base
     POST_STATUS_DRAFT,
     POST_STATUS_PUBLISH
   ]
+  validates :title, presence: true
+  validates :category_id, presence: true
+  validates :status, presence: true
+  
   def abstract_image
     html_doc = Nokogiri::HTML::DocumentFragment.parse(content)
     if img = html_doc.css('img').first

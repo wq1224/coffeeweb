@@ -17,6 +17,8 @@ class Admin::PostsController < Admin::AdminController
       redirect_to admin_post_url(@post)
     else
       flash.now[:error] = '更新失败'
+      @categories = Category.all.collect { |category| [category.name,category.id] }
+      @statuses = get_statuses
       render 'edit'
     end
   end
@@ -37,6 +39,8 @@ class Admin::PostsController < Admin::AdminController
       else
         format.html { 
           flash.now[:error] = '创建失败'
+          @categories = Category.all.collect { |category| [category.name,category.id] }
+          @statuses = get_statuses
           render :new
         }
         format.json { render json: @post.errors, status: :unprocessable_entity }

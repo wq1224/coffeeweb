@@ -1,4 +1,17 @@
-  <%= simple_form_for([:admin, @member],as: :member, :html => {novalidate: true}) do |f| %>
+  <%= simple_form_for([:admin, @member],as: :member, :html => {novalidate: false}) do |f| %>
+
+<% if @member.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      The form contains <%= pluralize(@member.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% @member.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 
   <div class="form-group">
     <%= f.input :username, input_html:{class:'form-control'} %>
@@ -17,11 +30,11 @@
   </div>
   
   <div class="form-group">
-     <%=f.select :type, @types, :prompt=>"请选择"%> 
+     <%=f.select :type, @types, :prompt=>"请选择" , input_html:{class:'form-control'}%> 
   </div>
 
   <div class="form-group">
-     <%=f.select :status, @statuses, :prompt=>"请选择"%> 
+     <%=f.select :status, @statuses, :prompt=>"请选择" , input_html:{class:'form-control'}%> 
   </div>
 
   <div class="form-group">

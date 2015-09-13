@@ -6,6 +6,12 @@ class Member < ActiveRecord::Base
     USER_STATUS_REGISTERED
   ]
   
+  validates :username, presence: true
+  validates :username, uniqueness: true
+  validates :password, presence: true
+  validates :type, presence: true
+  validates :status, presence: true
+
   def authenticate(password)
     self.password == password
   end

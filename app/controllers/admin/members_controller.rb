@@ -17,6 +17,8 @@ class Admin::MembersController < Admin::AdminController
       else
         format.html { 
           flash.now[:error] = '创建失败'
+          @statuses = get_statuses
+          @types = get_types
           render :new
         }
         format.json { render json: @member.errors, status: :unprocessable_entity }
@@ -32,11 +34,13 @@ class Admin::MembersController < Admin::AdminController
   
   def update
     @member = Member.find(params[:id])
-    if @member.update(member_params)
+    if @member.update(member_params_update)
       flash[:success] = '更新成功'
       redirect_to admin_member_url(@member)
     else
       flash.now[:error] = '更新失败'
+      @statuses = get_statuses
+      @types = get_types
       render 'edit'
     end
   end
@@ -64,6 +68,10 @@ class Admin::MembersController < Admin::AdminController
    
   private
     def member_params
+      params.require(:member).permit(:username,:password,:email,:phone,:status,:type)
+    end
+
+    def member_params_update
       params.require(:member).permit(:username,:password,:email,:phone,:status,:type)
     end
     
