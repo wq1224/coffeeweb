@@ -1,21 +1,21 @@
 class PostsController < ApplicationController
   
   def list
-    @posts = Post.all
-    @latest_posts = Post.last(10)
+    @posts = Post.where(status: 1).order(id: :desc)
+    @latest_posts = Post.where(status: 1).order(id: :desc).limit(10)
     @categories = Category.all
   end
 
   def show
     @post = Post.find(params[:id])
-    @latest_posts = Post.last(10)
+    @latest_posts = Post.where(status: 1).order(id: :desc).limit(10)
     @categories = Category.all
   end
 
   def show_by_categories
     @category = Category.find(params[:id])
-    @posts = Post.where(category:params[:id])
-    @latest_posts = Post.last(10)
+    @posts = Post.where(category:params[:id],status:1).order(id: :desc)
+    @latest_posts = Post.where(status: 1).order(id: :desc).limit(10)
     @categories = Category.all
   end
    
