@@ -27,8 +27,9 @@
   <div class="form-group">
     <div class="controls">
       <label class="checkbox">是否为活动</label>
-      <input type="checkbox" value="Activity" name="post[type]" checked="checked">
+      <%=f.collection_radio_buttons :type, [[Activity, '是（活动预告）'] ,[Post, '否（总结）']], :first, :last%>
     </div>
+
   </div>
   
   <div class="form-group">
