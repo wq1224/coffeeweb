@@ -1,4 +1,4 @@
 <h3>新建用户</h3>
 <%= render "form" %>
-<%= simple_form_for(@member,url: admin_members_path(@member), :html => {novalidate: true, multipart: true}) do |f| %>
+<%= simple_form_for(@member,url: admin_members_path(@member), :html => {novalidate: false, multipart: false}) do |f| %>
 <% end %>

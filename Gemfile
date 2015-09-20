@@ -39,6 +39,8 @@ gem 'codemirror-rails'
 gem 'carrierwave'
 gem 'mini_magick', '~> 4.0.2'
 
+gem 'bcrypt'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

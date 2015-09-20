@@ -2,6 +2,7 @@ class Admin::MembersController < Admin::AdminController
   def new
     @statuses = get_statuses
     @types = get_types
+    @member = Member.new
   end
   
   def create
@@ -34,7 +35,9 @@ class Admin::MembersController < Admin::AdminController
   
   def update
     @member = Member.find(params[:id])
-    if @member.update(member_params_update)
+    params[:member].delete(:password) if params[:member][:password].blank?
+    params[:member].delete(:password_confirmation) if params[:member][:password_confirmation].blank?
+    if @member.update(member_params)
       flash[:success] = '更新成功'
       redirect_to admin_member_url(@member)
     else
@@ -68,11 +71,7 @@ class Admin::MembersController < Admin::AdminController
    
   private
     def member_params
-      params.require(:member).permit(:username,:password,:email,:phone,:status,:type)
-    end
-
-    def member_params_update
-      params.require(:member).permit(:username,:password,:email,:phone,:status,:type)
+      params.require(:member).permit(:username,:password,:password_confirmation,:email,:phone,:status,:type)
     end
     
     def get_statuses

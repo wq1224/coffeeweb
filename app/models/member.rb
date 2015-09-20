@@ -8,11 +8,11 @@ class Member < ActiveRecord::Base
   
   validates :username, presence: true
   validates :username, uniqueness: true
-  validates :password, presence: true
+  validates :password, presence: true ,  confirmation: true, length: { minimum: 6}, on: :create
+  validates :password_confirmation, presence: true,on: :update, unless: lambda{ |member| member.password.blank? } 
   validates :type, presence: true
   validates :status, presence: true
 
-  def authenticate(password)
-    self.password == password
-  end
+  has_secure_password
+
 end
