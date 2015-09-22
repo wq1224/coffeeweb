@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'posts/list' => 'posts#list'
   get 'activities/list' => 'activities#list'
   get '/categories/:id/posts' => 'posts#show_by_categories'
-  get 'posts/:id' => 'posts#show', :as => :post
+  get 'posts/:id' => 'posts#show', :as => :post  #make post_path work
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'

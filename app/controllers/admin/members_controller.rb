@@ -53,7 +53,7 @@ class Admin::MembersController < Admin::AdminController
   end
   
   def index
-    @members = Member.all
+    @members = Member.paginate(:page => params[:page], :per_page => 10).order(id: :desc)
   end
   
   # DELETE /admin/categories/1

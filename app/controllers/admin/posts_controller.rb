@@ -64,7 +64,7 @@ class Admin::PostsController < Admin::AdminController
   end
   
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 5).order(id: :desc)
+    @posts = Post.paginate(:page => params[:page], :per_page => 10).order(id: :desc)
   end
    
   private
