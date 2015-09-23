@@ -12,10 +12,11 @@
 						</div>
 						<div class="col-md-10">
 						<%= link_to activity.title, post_path(activity),{:class => "post-list-title"} %><br>
-						<%= truncate(strip_tags(activity.content), :length=>400) %>
+						<%= truncate(strip_tags(activity.content), :length=>300) %>
 						</div>	
 				  </div>
                 <% end %>
+                <%= will_paginate @activities, renderer: BootstrapPagination::Rails %>
             </div>
             <div class="col-md-3">
 	          <h4>最新动态</h4>

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   
   def list
-    @posts = Post.where(status: 1).order(id: :desc)
+    @posts = Post.where(status: 1).paginate(:page => params[:page], :per_page => 10).order(id: :desc)
     @latest_posts = Post.where(status: 1).order(id: :desc).limit(10)
     @categories = Category.all
   end
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
   def show_by_categories
     @category = Category.find(params[:id])
-    @posts = Post.where(category:params[:id],status:1).order(id: :desc)
+    @posts = Post.where(category:params[:id],status:1).paginate(:page => params[:page], :per_page => 5).order(id: :desc)
     @latest_posts = Post.where(status: 1).order(id: :desc).limit(10)
     @categories = Category.all
   end

@@ -9,9 +9,10 @@
 				<% @posts.each do |post| %>
 				  <div class="post-list-item">   
 						<%= link_to post.title, post_path(post),{:class => "post-list-title"} %><br>
-						<%= truncate(strip_tags(post.content), :length=>400) %>
+						<%= truncate(strip_tags(post.content), :length=>200) %>
 				  </div>
                 <% end %>
+                <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
             </div>
             <div class="col-md-3">
 	          <h4>最新动态</h4>
