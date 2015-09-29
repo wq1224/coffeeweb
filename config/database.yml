@@ -26,4 +26,8 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: coffeeweb
+  username: root
+  password:
+  encoding: utf8
+  collation: utf8_general_ci
