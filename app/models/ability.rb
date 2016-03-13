@@ -9,6 +9,7 @@ class Ability
           can :manage, :all
         elsif user.class == Admin
           can :manage, Post
+          can :manage, Category
           can :read, Member
           can :read, Admin
           can :read, Normal 

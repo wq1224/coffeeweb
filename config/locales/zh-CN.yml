@@ -1,4 +1,7 @@
 zh-CN:
+  will_paginate:
+      previous_label: "上一页"
+      next_label: "下一页"
   activerecord:
     models:
       normal:普通用户
@@ -11,6 +14,25 @@ zh-CN:
         password_confirmation: '确认密码'
         email: '邮件地址'
         phone: '电话'
+        type: '类型'
+        status: '状态'
+        created_at: '创建时间'
+        updated_at: '更新时间'
+      category:
+        name: '栏目名'
+        desc: '栏目描述'
+        created_at: '创建时间'
+        updated_at: '更新时间'
+      post:
+        title: '文章名'
+        content: '文章内容'
+        category_id: '所属栏目'
+        type: '类型'
+        status: '状态'
+        image: '首页图片'
+        creator_id: '作者'
+        created_at: '创建时间'
+        updated_at: '更新时间'
     errors:
       template: 
         header: 
@@ -25,12 +47,10 @@ zh-CN:
         confirmation: "不一致"
     helpers:
       submit:
-        normal:
+        activity:
           create: "创建"
           submit: "保存"
           update: "更新"
-
-
 
   simple_form:
     "yes": '确定'
