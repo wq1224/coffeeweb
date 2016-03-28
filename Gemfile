@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -28,6 +28,7 @@ gem 'simple_form'
 
 gem 'cancancan', '~> 1.10'
 
+gem 'devise'
 # You'll need to include the following dependencies of Summernote
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
