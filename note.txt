@@ -15,7 +15,7 @@ rails g controller admin/posts
 rails g controller admin/members
 rails generate migration change_content_to_posts content:longtext
 rails generate migration add_activity_id_to_activity_attributes activity_id:integer
-
+rails generate devise:views
 rake routes
        Prefix Verb   URI Pattern               Controller#Action
 welcome_index GET    /welcome/index(.:format)  welcome#index
@@ -45,6 +45,10 @@ rails g controller posts
       create      app/assets/stylesheets/posts.scss
 
 rails generate uploader Image
+
+rails generate devise:install
+rails generate devise User
+
 
 
 				<div class="col-md-3 content-top-grid">					
