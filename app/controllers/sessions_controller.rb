@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     member = Member.find_by(username: params[:session][:username].downcase)
     if member && member.authenticate(params[:session][:password])
-      log_in member
+      log_in_admin member
       redirect_to admin_posts_path
     else
       flash.now[:danger]= '错误的用户名或密码' 
@@ -15,21 +15,17 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    log_out_admin
     redirect_to login_path
   end
 
-  def log_in(member)
-    session[:user_id] = member.id
+  def log_in_admin(member)
+    session[:admin_id] = member.id
   end
   
-  def current_user
-    @current_user ||= Member.find_by(id: session[:user_id])
-  end
-  
-  def log_out
-    session.delete(:user_id)
-    @current_user = nil
+  def log_out_admin
+    session.delete(:admin_id)
+    @current_admin = nil
   end
 
 end
