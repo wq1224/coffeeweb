@@ -49,7 +49,9 @@ rails generate uploader Image
 rails generate devise:install
 rails generate devise User
 
-
+rails g model Group groupname:string description:string price:integer
+rails g model Question type:string parent_id:integer group_id:integer question:string default_value:string
+rails g model Answer question_id:integer group_id:integer user_id:long answer:string
 
 				<div class="col-md-3 content-top-grid">					
 						<div class="image-grid">

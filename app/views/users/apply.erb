@@ -1,0 +1,361 @@
+<style type="text/css">
+  .clearfix {
+    padding-top: 20px;
+  }
+  .navbar-inverse a{
+    color: #FFF !important;
+  }
+  .navbar-inverse {
+    background-color: #f7941d;
+    border-color: #f7941d;
+  }
+  .first-header {
+    padding-top: 20px;
+  }
+  .form-horizontal .control-label{
+    text-align: left;
+  }
+  #myTabs {
+    margin-bottom: 20px;
+  }
+  .tab-pane{
+    padding: 0 10px;
+  }
+  .big_btn
+  {
+    padding:40px 0px;
+    text-align: center;
+  }
+</style>
+  <script type="text/javascript">
+  $('#myTabs a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+  </script>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">一杯咖啡</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首页</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+
+      <div class="page-header first-header">
+        <h1>报名表</h1>
+      </div>
+      <form class="form-horizontal" role="form" id="apply_form">
+      <fieldset>
+        <legend>基本情况</legend>
+         <div class="form-group">
+            <label class="col-sm-1 control-label" for="realname">姓名</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="realname" type="text" placeholder=""/>
+            </div>
+            <label class="col-sm-1 control-label" for="gender">性别</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="gender" type="text" placeholder=""/>
+            </div>
+            <label class="col-sm-1 control-label" for="birthday">出生年月</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="birthday" type="text" placeholder="1990-01-01"/>
+            </div>
+         </div>
+         <div class="form-group">
+            <label class="col-sm-1 control-label" for="marriage">婚史</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="marriage" type="text" placeholder=""/>
+            </div>
+            <label class="col-sm-1 control-label" for="job">职业</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="job" type="text" placeholder=""/>
+            </div>
+            <label class="col-sm-1 control-label" for="mobile">手机号</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="mobile" type="text" placeholder=""/>
+            </div>
+         </div>
+         <div class="form-group">
+            <label class="col-sm-1 control-label" for="education">学历</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="education" type="text" placeholder=""/>
+            </div>
+            <label class="col-sm-1 control-label" for="profession">专业背景</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="profession" type="text" placeholder=""/>
+            </div>
+            <label class="col-sm-1 control-label" for="interest">兴趣特长</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="interest" type="text" placeholder="1990-01-01"/>
+            </div>
+         </div>
+         <div class="form-group">
+            <label class="col-sm-1 control-label" for="height">身高(选填)</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="height" type="text" placeholder=""/>
+            </div>
+            <label class="col-sm-1 control-label" for="weight">体重(选填)</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="weight" type="text" placeholder=""/>
+            </div>
+            <label class="col-sm-1 control-label" for="livingplace">居住区域</label>
+            <div class="col-sm-3">
+               <input class="form-control" id="livingplace" type="text" placeholder="省份-区-县"/>
+            </div>
+         </div>
+         <div class="form-group">
+            <label class="col-sm-1 control-label" for="qq">qq号</label>
+            <div class="col-sm-5">
+               <input class="form-control" id="qq" type="text" placeholder="root"/>
+            </div>
+            <label class="col-sm-1 control-label" for="wechat">微信号</label>
+            <div class="col-sm-5">
+               <input class="form-control" id="wechat" type="password" placeholder="123456"/>
+            </div>
+         </div>
+         <div class="form-group">
+              <label for="source" class="col-sm-3 control-label">您从何处知道我们</label>
+              <div class="col-sm-3">
+              <select class="form-control" id="source">
+                <option>官方网站</option>
+                <option>豆瓣</option>
+                <option>微信</option>
+                <option>微博</option>
+                <option>壹心理</option>
+                <option>朋友介绍</option>
+                <option>其他</option>
+              </select>
+              </div>
+              <div class="col-sm-6" id="source_other">
+                 <input type="text" class="form-control" id="firstname"
+                    placeholder="其他">
+              </div>
+         </div>
+         <div class="form-group">
+              <label for="recommender" class="col-sm-3 control-label">如有会员推荐,请填写其姓名与联系方式</label>
+              <div class="col-sm-3">
+                 <input type="text" class="form-control" id="recommender_name"
+                    placeholder="姓名">
+              </div>
+              <div class="col-sm-6">
+                 <input type="text" class="form-control" id="recommender_contact"
+                    placeholder="联系方式">
+              </div>
+         </div>
+         <div class="form-group">
+              <label for="group" class="col-sm-2 control-label">选择加入的社群</label>
+             <div class="col-sm-10">
+              <label class="checkbox">
+                <input type="checkbox" id="inlineCheckbox1" value="option1">
+                心理成长研修组
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="inlineCheckbox2" value="option2">
+                魔都正能量组
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="inlineCheckbox3" value="option3">
+                相遇在上海社区
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="inlineCheckbox3" value="option3">
+                心里信息共享群
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="inlineCheckbox3" value="option3">
+                心理咨询师交流群
+              </label>
+            </div>
+        </div>
+      </fieldset>
+      <div class="clearfix"></div>
+      <fieldset>
+        <legend>社群信息</legend>
+        <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" id="myTabs">
+    <li role="presentation" class="active"><a href="#tab1" aria-controls="home" role="tab" data-toggle="tab">心理成长研修组</a></li>
+    <li role="presentation"><a href="#tab2" aria-controls="profile" role="tab" data-toggle="tab">魔都正能量组</a></li>
+    <li role="presentation"><a href="#tab3" aria-controls="messages" role="tab" data-toggle="tab">相遇在上海社区</a></li>
+    <li role="presentation"><a href="#tab4" aria-controls="settings" role="tab" data-toggle="tab">心理信息共享群</a></li>
+    <li role="presentation"><a href="#tab5" aria-controls="settings" role="tab" data-toggle="tab">心理咨询师交流群</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="tab1">
+      <h4>研修方向</h4>
+      <div class="form-group">
+            <label class="col-sm-2 control-label" for="ds_host">(请选择，到时候会根据你的选择邀请你加入)</label>
+            <div class="col-sm-10">
+              <label class="checkbox">
+                <input type="checkbox" id="inlineCheckbox1" value="option1">
+                职场心理研修组：职业规划、职场压力、职场人际关系
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="inlineCheckbox2" value="option2">
+                家庭亲子心理研修组：家庭教育，青少年成长，三代人如何和谐相处
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="inlineCheckbox3" value="option3">
+                婚恋两性心理研修组：婚姻中、恋爱中、抑或单身时相处与自处
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="inlineCheckbox3" value="option3">
+                自我成长心理研修组：探讨自我探索、人生价值以及自我完善
+              </label>
+            </div>
+        </div>
+         <h4>对研修组线上、线下活动的建议</h4>
+         <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">1. 你希望线上交流主要做些什么？</label>
+              <div class="col-sm-2">
+              <select class="form-control">
+                <option>知识分享</option>
+                <option>困惑解答</option>
+                <option>主题探讨</option>
+                <option>其他</option>
+              </select>
+              </div>
+              <div class="col-sm-7">
+                 <input type="text" class="form-control" id="firstname"
+                    placeholder="其他">
+              </div>
+         </div>
+         <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">2. 你希望多久举行一次线下活动？</label>
+              <div class="col-sm-2">
+              <select class="form-control">
+                <option>2周</option>
+                <option>1个月</option>
+                <option>2个月</option>
+                <option>3个月</option>
+                <option>其他</option>
+              </select>
+              </div>
+              <div class="col-sm-7">
+                 <input type="text" class="form-control" id="firstname"
+                    placeholder="其他">
+              </div>
+         </div>
+         <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">3. 你希望线下活动的形式是</label>
+              <div class="col-sm-2">
+              <select class="form-control">
+                <option>聚会</option>
+                <option>吃饭闲聊</option>
+                <option>主题探讨</option>
+                <option>其他</option>
+              </select>
+              </div>
+              <div class="col-sm-7">
+                 <input type="text" class="form-control" id="firstname"
+                    placeholder="其他">
+              </div>
+         </div>
+         <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">3. 你目前比较想交流的话题有：</label>
+              <div class="col-sm-9">
+                 <input type="text" class="form-control" id="firstname"
+                    placeholder="其他">
+              </div>
+         </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tab2">
+      <h4>目前“正能量”的储备情况</h4>
+      <div class="form-group">
+            <label for="firstname" class="col-sm-3 control-label">1. 感兴趣的健身活动有？</label>
+            <div class="col-sm-9">
+               <input type="text" class="form-control" id="firstname"
+                  placeholder="">
+            </div>
+       </div>
+         <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">2. 感兴趣的技能有？</label>
+              <div class="col-sm-9">
+                 <input type="text" class="form-control" id="firstname"
+                    placeholder="">
+              </div>
+         </div>
+         <div class="form-group">
+              <label for="firstname" class="col-sm-3 control-label">3. 本人比较擅长的健身活动或技能有？（选填）</label>
+              <div class="col-sm-9">
+                 <input type="text" class="form-control" id="firstname"
+                    placeholder="">
+              </div>
+         </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tab3">
+      <div class="form-group">
+        <label for="firstname" class="control-label">成长经历（选填：童年时期、求学时期、参加工作情况，家庭情况，建议可穿插填写感情经历）</label>
+        <div>
+           <textarea class="form-control" id="firstname"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname" class="control-label">相遇目标（建议填）
+        你期待相遇怎样的异性？你期待从本活动中得到什么样的恋爱、感情、人际关系等的指导？</label>
+        <div>
+           <textarea class="form-control" id="firstname"></textarea>
+        </div>
+      </div>     
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tab4">
+      <div class="form-group">
+        <label for="firstname" class="control-label">简单介绍并评价您参加过的心理类活动</label>
+        <div>
+           <textarea class="form-control" id="firstname"></textarea>
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tab5">
+      
+    </div>
+
+    <div class="big_btn" id="apply_member">
+        <a type="submit" name="commit" onclick="apply()">提交</a>
+    </div>
+
+
+  </fieldset>
+
+   <legend>注意事项</legend>
+
+  <p>1、会员可加入上述社区（组），每个社区（组）均有一个微信群</p>
+
+ <p>2、请根据自身实际需要选择想加入的社区，其中，“相遇在上海”要求符合法定婚龄的单身人群，“心理咨询师交流群”需要持有心理咨询师证书（或相关证书），请确保您符合条件。</p>
+
+ <p>3、想加入哪个组即填写哪个组的具体信息，不准备加入可不填。</p>
+
+ <p>4、每个社区均有入群费，已在之前做标注</p>
+
+ <p>5、填写表格后请回传至(coffeecenter@163.com)</p>
+
+ <p>6、审核通过后，会有工作人员将您拉入群中，并向其支付入组费</p>
+
+ <p>7、请提前阅读第三页的一杯咖啡社区（会员）生活守则，填表视为同意该守则。</p>
+  </form>
+
+
+    </div> <!-- /container -->
+    <footer class="footer navbar-fixed-bottom ">
+    <div class="container">
+    </div>
+</footer>
+  </body>
+</html>

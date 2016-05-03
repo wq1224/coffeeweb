@@ -518,7 +518,7 @@ padding-left:31px;
 	margin-top: 12%;
 	padding-left:20px;
 }
-.learn a
+.learn a, .big_btn a
 {
 	background: #f7941d;
 	border-bottom: solid 5px #C96F07;
@@ -529,7 +529,7 @@ padding-left:31px;
 	font-size: 20px;
 	color:#FFFFFF;
 }
-.learn a:hover
+.learn a:hover, .big_btn a:hover
 {
 	color:#f7941d;
 	text-decoration:none;

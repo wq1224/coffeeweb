@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     resources :normals, :admins, :super_admin ,controller: 'members'
     resources :activities, controller: 'posts'
   end
+
+  get 'users/apply' => 'users#apply'
   get 'posts/list' => 'posts#list'
   get 'activities/list' => 'activities#list'
   get '/categories/:id/posts' => 'posts#show_by_categories'

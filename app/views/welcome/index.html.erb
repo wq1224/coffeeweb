@@ -76,7 +76,21 @@
 						<li><a class="scroll" href="#activity">咖啡播报</a>
 						</li>
 						<li class="contact"><a class="scroll" href="#contact">联系我们</a>
-						</li>	
+						</li>
+						<% if user_signed_in? %>
+					        <li class="dropdown">
+					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %><span class="caret"></span></a>
+					          <ul class="dropdown-menu">
+					            <li><a href="/users/apply">申请会员</a></li>
+					            <li role="separator" class="divider"></li>
+					            <li><%= link_to "登出", destroy_user_session_path, method: "delete" %></li>
+					          </ul>
+					        </li>
+  						<%elsif%>
+  						    <li><a href="/users/sign_in">登录</a>／<a href="/users/sign_up">注册</a>
+							</li>
+						<%end%>
+						
 						<div class="clearfix"> </div>	
 					</ul>
 				</nav>

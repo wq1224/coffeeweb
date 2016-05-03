@@ -13,3 +13,13 @@ c3 = Category.new(:name=>"心灵聚会", :desc=>"<p style=\"color: rgb(0, 0, 0);
 c3.save
 c4 = Category.new(:name=>"心理师成长",:desc=>"<p style=\"color: rgb(0, 0, 0); font-family: simsun; font-size: 13px; text-align: center;\"><em>一如所有的人一样</em></p><p style=\"color: rgb(0, 0, 0); font-family: simsun; font-size: 13px; text-align: center;\"><em>所有咨询师都在成长的路上</em></p><p style=\"color: rgb(0, 0, 0); font-family: simsun; font-size: 13px; text-align: center;\"><em>一杯咖啡陪伴大家成长</em></p><p style=\"color: rgb(0, 0, 0); font-family: simsun; font-size: 13px; text-align: right;\"><img src=\"http://www.yibeikafei.org/images/2e.png\" alt=\"\" width=\"217\" height=\"216\" style=\"max-width: 100%; height: auto; float: left; padding: 20px;\"></p><p style=\"color: rgb(0, 0, 0); font-family: simsun; font-size: 13px;\">&nbsp;</p><p style=\"color: rgb(0, 0, 0); font-family: simsun; font-size: 13px;\"><strong>&nbsp;众所周知，</strong>目前国内的心理咨询师成长路径无非是通过各种各样的高价培训。因此有人戏言，咨询师是“穷困潦倒的”。<br>而且，有不少的心理咨询机构的营生之道，是以赚取咨询师的培训费用为主。<br>一杯咖啡希望给各位咨询师，特别是新手咨询师提供更平价、更切合实际的心理师成长活动。所有的活动，仅需花费一杯咖啡的价钱即可参与。有不少咨询师通过以下的活动，成长为一个具有一定实战经验和基础技术的咨询师，当然也通过这个过程收获了成长路上的好朋友。</p><h3 style=\"margin-top: 10px; margin-right: 0px; margin-left: 0px; font-family: simsun; line-height: 40px; color: rgb(68, 68, 68); text-rendering: optimizeLegibility; font-size: 19.5px;\">&nbsp;<strong>心理师成长活动主要有：</strong></h3><p style=\"color: rgb(0, 0, 0); font-family: simsun; font-size: 13px;\"><strong>上海心理咨询师读书与督导工作坊</strong>：<br>读书会+同辈督导 结合的模式。<br>按照心理学三个势力（心理动力学、认知行为、人本主义），分别选取三本书进行读书，让全体成员在一段扎实的学习过程中，掌握作为心理咨询师所需的基本技能。<br>工作坊进行中，根据进度适当安排个案团体的督导、个案模拟演练等，以帮助咨询师提高技术。<br>考虑到团体心理咨询师的成长，我们另有团体咨询读书与督导工作坊。<br>读书活动以研讨为主，辅以案例模拟。<br><br><strong>心理师沙龙</strong><br>不定期举办心理类的沙龙，一起研讨心理咨询相关的话题。<br><br><strong>参与“一杯咖啡”运营的机会</strong><br>通过上述活动，“一杯咖啡”会根据我们的观察，寻找与我们团队较为契合的咨询师，一起做点事情，把“一杯咖啡”做得更好。<br><br><strong>心理咨询师交流QQ群</strong><br>为心理咨询师交流学术、交流个案、交流业内信息提供的一个QQ交流平台。加入本群，先请联系qq：1979076342，索取咨询师登记表，经过审核后入群。<br><br><strong>心理师成长请联系qq：1979076342（心灵的读书会） 咨询或报名</strong></p>")
 c4.save
+
+
+group1 = Group.new(:groupname => '心理成长研修组',price => 1)
+group2 = Group.new(:groupname => '魔都正能量组',price => 1)
+group3 = Group.new(:groupname => '相遇在上海社区',price => 1)
+group4 = Group.new(:groupname => '心里信息共享群',price => 1)
+group5 = Group.new(:groupname => '心理咨询师交流群',price => 1)
+
+question1 = Question.new(:group => group1, :type => )
+

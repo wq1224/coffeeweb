@@ -8,6 +8,29 @@ zh-CN:
       admin:管理员
       superadmin:超级管理员
     attributes:
+      user:
+        mobile: '手机号'
+        encrypted_password:: '密码'
+        email: '邮件'
+        username:
+        status:
+        realname:
+        gender:
+        birthday:
+        marriage:
+        job:
+        education:
+        profession:
+        interest:
+        height:
+        weight:
+        livingplace:
+        qq:
+        wechat:
+        source:
+        recommender:
+        consultant:
+        certificateno:
       member:
         username: '用户名'
         password: '密码'
