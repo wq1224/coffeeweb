@@ -28,5 +28,46 @@ group5.save
 
 question1 = Question.new(:group => group1, :kind => :title, :question => "研修方向" )
 question1.save
-question2 = Question.new(:group => group1, :kind => :multiple, :parent => question1, :question => "(请选择，到时候会根据你的选择邀请你加入)", :default_value => "[\"职场心理研修组：职业规划、职场压力、职场人际关系\",\"家庭亲子心理研修组：家庭教育，青少年成长，三代人如何和谐相处\"]")
+question2 = Question.new(:group => group1, :kind => :multiple, :parent => question1, :question => "(请选择，到时候会根据你的选择邀请你加入)", :default_value => "[\"职场心理研修组：职业规划、职场压力、职场人际关系\",\"家庭亲子心理研修组：家庭教育，青少年成长，三代人如何和谐相处\",\"婚恋两性心理研修组：婚姻中、恋爱中、抑或单身时相处与自处\",\"自我成长心理研修组：探讨自我探索、人生价值以及自我完善\"]")
 question2.save
+
+question3 = Question.new(:group => group1, :kind => :title, :question => "对研修组线上、线下活动的建议" )
+question3.save
+question4 = Question.new(:group => group1, :kind => :single, :parent => question3, :question => "1. 你希望线上交流主要做些什么？", :default_value => "[\"知识分享\",\"困惑解答\",\"主题探讨\",\"其他\"]")
+question4.save
+question5 = Question.new(:group => group1, :kind => :single, :parent => question3, :question => "2. 你希望多久举行一次线下活动？", :default_value => "[\"2周\",\"1个月\",\"2个月\",\"3个月\",\"其他\"]")
+question5.save
+question6 = Question.new(:group => group1, :kind => :single, :parent => question3, :question => "3. 你希望线下活动的形式是：", :default_value => "[\"聚会\",\"吃饭闲聊\",\"主题探讨\",\"其他\"]")
+question6.save
+question7 = Question.new(:group => group1, :kind => :input, :parent => question3, :question => "3. 你目前比较想交流的话题有：")
+question7.save
+
+question8 = Question.new(:group => group2, :kind => :title, :question => "目前“正能量”的储备情况" )
+question8.save
+question9 = Question.new(:group => group2, :kind => :input, :parent => question8, :question => "1. 感兴趣的健身活动有？")
+question9.save
+question10 = Question.new(:group => group2, :kind => :input, :parent => question8, :question => "2. 感兴趣的技能有？")
+question10.save
+question11 = Question.new(:group => group2, :kind => :input, :parent => question8, :question => "3. 本人比较擅长的健身活动或技能有？（选填）")
+question11.save
+
+question12 = Question.new(:group => group3, :kind => :textarea, :question => "成长经历（选填：童年时期、求学时期、参加工作情况，家庭情况，建议可穿插填写感情经历）")
+question12.save
+question13 = Question.new(:group => group3, :kind => :textarea, :question => "相遇目标（建议填）你期待相遇怎样的异性？你期待从本活动中得到什么样的恋爱、感情、人际关系等的指导？")
+question13.save
+
+question14 = Question.new(:group => group4, :kind => :textarea, :question => "简单介绍并评价您参加过的心理类活动")
+question14.save
+
+question15 = Question.new(:group => group5, :kind => :single, :question => "咨询师资格", :default_value => "[\"二级\",\"三级\"]")
+question15.save
+question16 = Question.new(:group => group5, :kind => :input, :question => "证书编号")
+question16.save
+question17 = Question.new(:group => group5, :kind => :title, :question => "心理咨询学习和实践、执业情况")
+question17.save
+question18 = Question.new(:group => group5, :kind => :input, :parent => question17, :question => "心理咨询从业情况（专/兼）：")
+question18.save
+question19 = Question.new(:group => group5, :kind => :input, :parent => question17, :question => "目前服务的机构有：")
+question19.save
+question20 = Question.new(:group => group5, :kind => :input, :parent => question17, :question => "学习培训情况：")
+question20.save
