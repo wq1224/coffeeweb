@@ -161,6 +161,7 @@
          <div class="form-group">
               <label for="group" class="col-sm-2 control-label">选择加入的社群</label>
              <div class="col-sm-10">
+
               <label class="checkbox">
                 <input type="checkbox" id="inlineCheckbox1" value="option1">
                 心理成长研修组
@@ -196,6 +197,69 @@
     <li role="presentation"><a href="#tab5" aria-controls="settings" role="tab" data-toggle="tab">心理咨询师交流群</a></li>
   </ul>
 
+  <ul class="nav nav-tabs" role="tablist" id="myTabs_2">
+  <% @groups.each do |group| %>
+    <li role="presentation"><a href="#tab_<%= group.id%>" role="tab" data-toggle="tab"><%= group.groupname%></a></li>
+  <%end%>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <% @questions.each do |key,value| %>
+      <div role="tabpanel" class="tab-pane active" id="tab_<%=key%>">   
+      <% value.each do |question| %>
+        <% if question.kind.to_sym == :title %>
+          <h4><%=question.question%></h4>
+        <%else%>
+          <div class="form-group">
+            <% if question.kind.to_sym == :single %>
+              <label for="<%=question.id%>" class="col-sm-2 control-label"><%=question.question%></label>
+              <% answers = JSON.parse(question.default_value) %>
+              <% flag = false %>      
+              <div class="col-sm-2">
+                <select class="form-control">
+                  <% answers.each do |answer| %>
+                    <option><%=answer%></option>
+                    <% if @answer == "其他" %>
+                    <% flag = true%>
+                    <% end %>
+                  <% end %>
+                </select>
+              </div>
+              <% if flag %>
+                <div class="col-sm-7">
+                   <input type="text" class="form-control" id="firstname"
+                      placeholder="其他">
+                </div>
+              <%end%>
+            <% elsif question.kind.to_sym == :multiple %>
+              <label for="<%=question.id%>" class="col-sm-3 control-label"><%=question.question%></label>
+              <% answers = JSON.parse(question.default_value) %>      
+              <div class="col-sm-10">
+                <% answers.each do |answer| %>
+                  <label class="checkbox">
+                    <input type="checkbox" question="<%=answer%>">
+                    <%=answer%>
+                  </label>
+                <%end%>
+              </div>
+            <% elsif question.kind.to_sym === :textarea %>
+              <label for="<%=question.id%>" class="control-label"><%=question.question%></label>    
+              <div>
+                <textarea class="form-control" id=""></textarea>
+              </div>
+            <% elsif question.kind.to_sym === :input %>
+              <label for="<%=question.id%>" class="col-sm-3 control-label"><%=question.question%></label>    
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="">
+              </div>
+            <% end %>
+          </div>       
+        <% end %>
+      <%end%>
+      </div>
+    <%end%>
+  </div>
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="tab1">

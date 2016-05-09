@@ -15,11 +15,18 @@ c4 = Category.new(:name=>"心理师成长",:desc=>"<p style=\"color: rgb(0, 0, 0
 c4.save
 
 
-group1 = Group.new(:groupname => '心理成长研修组',price => 1)
-group2 = Group.new(:groupname => '魔都正能量组',price => 1)
-group3 = Group.new(:groupname => '相遇在上海社区',price => 1)
-group4 = Group.new(:groupname => '心里信息共享群',price => 1)
-group5 = Group.new(:groupname => '心理咨询师交流群',price => 1)
+group1 = Group.new(:groupname => '心理成长研修组',:price => 1)
+group2 = Group.new(:groupname => '魔都正能量组',:price => 1)
+group3 = Group.new(:groupname => '相遇在上海社区',:price => 1)
+group4 = Group.new(:groupname => '心里信息共享群',:price => 1)
+group5 = Group.new(:groupname => '心理咨询师交流群',:price => 1)
+group1.save
+group2.save
+group3.save
+group4.save
+group5.save
 
-question1 = Question.new(:group => group1, :type => )
-
+question1 = Question.new(:group => group1, :kind => :title, :question => "研修方向" )
+question1.save
+question2 = Question.new(:group => group1, :kind => :multiple, :parent => question1, :question => "(请选择，到时候会根据你的选择邀请你加入)", :default_value => "[\"职场心理研修组：职业规划、职场压力、职场人际关系\",\"家庭亲子心理研修组：家庭教育，青少年成长，三代人如何和谐相处\"]")
+question2.save

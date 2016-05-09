@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
   respond_to :json
   def apply
-  	@questions = Question.all
     @groups = Group.all
+    @questions = Hash.new
+    @groups.each do |group|
+      @questions.store(group.id, Question.where(:group => group.id))
+    end
   end
 
 
