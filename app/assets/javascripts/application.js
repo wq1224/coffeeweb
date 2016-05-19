@@ -12,4 +12,4 @@
 //
 //= require move-top
 //= require jquery_ujs
-//= require welcome
+//= require jquery.form
