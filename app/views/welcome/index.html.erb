@@ -93,7 +93,7 @@
 				<% @activities.each do |activity| %>
 				  <div class="col-md-3 content-top-grid">
 						<div class="image-grid">
-						<%= link_to image_tag(activity.image_url(:small)), post_path(activity) if activity.image? %>
+						<%= link_to image_tag(activity.image_url(:small)), post_path(activity) if !activity.image.nil? %>
 						</div>
 						<h4><%= truncate(activity.title, :length=>20)%></h4>
 						<%= truncate(strip_tags(activity.content), :length=>50) %>					
@@ -241,7 +241,7 @@
 							<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
 							<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">
 								<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
-									<%= image_tag(post.image_url(:large), :class=>"img-responsive") if post.image?  %>
+									<%= image_tag(post.image_url(:large), :class=>"img-responsive") if !post.image.nil?  %>
 								</a>
 								<h4><%=link_to truncate(post.title,:length=>20), post_path(post) %><h4>
 								<h3><%= truncate(strip_tags(post.content), :length=>20) %></h3>

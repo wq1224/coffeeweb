@@ -8,7 +8,7 @@
 				<% @activities.each do |activity| %>
 				  <div class="row post-list-item">
 				  	    <div class="col-md-2">
-						<%= image_tag(activity.image_url(:small),:class=>"post-list-img") if activity.image? %>
+						<%= image_tag(activity.image_url(:small),:class=>"post-list-img") if !activity.image.nil? %>
 						</div>
 						<div class="col-md-10">
 						<%= link_to activity.title, post_path(activity),{:class => "post-list-title"} %><br>
